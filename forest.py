@@ -2,14 +2,14 @@ import pandas as pd
 import streamlit as st
 # import numpy as np
 # import seaborn as sns
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report, confusion_matrix
 
 # Mostrar o cargar los datos
-ds = pd.read_csv("D:\cursospyder\dataset_financiero_riesgo.csv")
+ds = pd.read_csv("dataset_financiero_riesgo.csv")
 
 # Colocar un titulo principal en la página Web
 st.title("Predicción de Riesgo Financiero")
@@ -22,7 +22,7 @@ st.title("Predicción de Riesgo Financiero")
 # y retornamos la variable al que llama a la función. En este caso la variable 
 # que retornamos se llama "ds", abreviatura de "dataset".
 def cargar_datos():
-    ds = pd.read_csv("D:\cursospyder\dataset_financiero_riesgo.csv")
+    ds = pd.read_csv("dataset_financiero_riesgo.csv")
     return ds
 
 ds = cargar_datos()
